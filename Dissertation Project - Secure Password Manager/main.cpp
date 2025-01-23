@@ -20,7 +20,7 @@ int main()
 	passwordCreate pcr1;
 
 	pcr1.getPasswordCreate();
-	cout << "Hello Wordld" << endl;
+	cout << "Hello Wordld sigma" << endl;
 	
 
     return 0;
