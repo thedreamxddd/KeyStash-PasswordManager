@@ -37,10 +37,33 @@ filecreate:
     }
     else {
         //If the process doesn't find any similarities, the file will be creates    
-        ofstream fileCreate(filename + ".txt", ios::app);
+        ofstream fileCreate(tempFileName, ios::app);
         fileCreate << filename << "\n" << usernameCreate << "\n" << passwordCreate << "\n" << linkCreate << "\n" << notesCreate << "\n";
         //Close file   
         fileCreate.close();
-        cout << "Account added to the Database." << endl;
+
+
+        fstream fin, fout;
+        // Open input file
+        // ios::binary- reading file
+        // character by character
+        fin.open(tempFileName, fstream::in);
+        fout.open(filename + "text.txt", fstream::out);
+
+        // Reading original file till
+        // end of file
+        while (fin >> noskipws >> c) {
+            int temp = (c + key);
+
+            // Write temp as char in
+            // output file
+            fout << (char)temp;
+        }
+
+        cout << "File sucessfully Encrypted" << endl;
+        // Closing both files
+        fin.close();
+        fout.close();
     }
+    cout << "Account added to the Database." << endl;
 }

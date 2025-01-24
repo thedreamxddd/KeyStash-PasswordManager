@@ -19,9 +19,8 @@ int main()
 	editFile ef1;
 	passwordCreate pcr1;
 
-	pcr1.getPasswordCreate();
-	cout << "Hello Wordld sigma" << endl;
+	cf1.getFileCreate();
 	
 
-    return 0;
+	return 0;
 }

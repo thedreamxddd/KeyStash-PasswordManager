@@ -12,9 +12,11 @@ private:
     string externalID, exPassword, exFirstName, exLastName;
     bool found = false;
 
+    int key = 493459394153;
+    char c;
+   
 public:
     void getFileCreate();
-
 };
 #endif
 
