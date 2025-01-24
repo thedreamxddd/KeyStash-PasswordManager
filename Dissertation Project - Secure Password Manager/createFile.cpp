@@ -48,7 +48,7 @@ filecreate:
         // ios::binary- reading file
         // character by character
         fin.open(tempFileName, fstream::in);
-        fout.open(filename + "text.txt", fstream::out);
+        fout.open("temp.txt", fstream::out);
 
         // Reading original file till
         // end of file
@@ -64,6 +64,12 @@ filecreate:
         // Closing both files
         fin.close();
         fout.close();
+
+        remove(tempFileName.c_str());
+        rename("temp.txt", tempFileName.c_str());
+        cout << "External Removed" << endl;
+
     }
+
     cout << "Account added to the Database." << endl;
 }

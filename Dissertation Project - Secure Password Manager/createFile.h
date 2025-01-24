@@ -11,6 +11,7 @@ private:
     string filename, line, tempFileName;
     string externalID, exPassword, exFirstName, exLastName;
     bool found = false;
+    bool located = false;
 
     int key = 493459394153;
     char c;
