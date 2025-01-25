@@ -28,7 +28,21 @@ void viewFile::getViewInsideFile() {
     getline(cin, response);
     accountFile = response + ".txt";
 
-    ifstream passwordFile(accountFile);
+    std::fstream fin, fout;
+    fin.open(accountFile, std::fstream::in);
+    fout.open("temp.txt", std::fstream::out);
+
+    while (fin >> std::noskipws >> c) {
+
+        // Remove the key from the
+        // character
+        int temp = (c - key);
+        fout << (char)temp;
+    }
+    fin.close();
+    fout.close();
+
+    ifstream passwordFile("temp.txt");
     //loop to check all lines in the file
     //if the enrolement number insered is detected print out the line
     while (getline(passwordFile, line)) {
@@ -43,4 +57,6 @@ void viewFile::getViewInsideFile() {
     }
     //close file
     passwordFile.close();
+    remove(tempFile.c_str());
+
 }

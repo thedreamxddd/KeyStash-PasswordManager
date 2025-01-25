@@ -38,7 +38,7 @@ filecreate:
     else {
         //If the process doesn't find any similarities, the file will be creates    
         ofstream fileCreate(tempFileName, ios::app);
-        fileCreate << filename << "\n" << usernameCreate << "\n" << passwordCreate << "\n" << linkCreate << "\n" << notesCreate << "\n";
+        fileCreate << filename << "\t" << usernameCreate << "\t" << passwordCreate << "\t" << linkCreate << "\t" << notesCreate << "\t";
         //Close file   
         fileCreate.close();
 
@@ -60,14 +60,13 @@ filecreate:
             fout << (char)temp;
         }
 
-        cout << "File sucessfully Encrypted" << endl;
         // Closing both files
         fin.close();
         fout.close();
 
         remove(tempFileName.c_str());
         rename("temp.txt", tempFileName.c_str());
-        cout << "External Removed" << endl;
+      
 
     }
 

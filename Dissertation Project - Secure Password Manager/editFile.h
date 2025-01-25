@@ -9,6 +9,11 @@ class editFile {
 private:
 	string usernameEdit, passwordEdit, linkEdit, notesEdit;
 	string fileNameEdit, tempFileName;
+
+	string tempFile = "temp.txt";
+	int key = 493459394153;
+	char c;
+
 public:
 	void getEditFile();
 };
