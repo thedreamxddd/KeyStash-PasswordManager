@@ -10,7 +10,6 @@ class deleteFile {
 private:
 	string tempfile;
 	string delete_file;
-
 public:
 	void getFileDelete();
 };

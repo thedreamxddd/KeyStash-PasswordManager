@@ -15,7 +15,6 @@ private:
 
     int key = 493459394153;
     char c;
-   
 public:
     void getFileCreate();
 };

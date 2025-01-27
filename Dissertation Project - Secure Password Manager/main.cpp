@@ -19,10 +19,7 @@ int main()
 	editFile ef1;
 	passwordCreate pcr1;
 
-	//cf1.getFileCreate();
-	//vf1.getViewInsideFile();
-
-	ef1.getEditFile();
+	vf1.getViewFile();
 
 	return 0;
 }

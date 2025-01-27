@@ -9,7 +9,6 @@ filecreate:
     getline(cin, filename);
     cout << "Login (Username/Email Address): " << endl;
     getline(cin, usernameCreate);
-    //add password check here after <------------- important
     cout << "Password: " << endl;
     getline(cin, passwordCreate);
     cout << "Direct Access Link: " << endl;
@@ -28,8 +27,8 @@ filecreate:
         }
     }
     fileCreate.close();
-    //If the line is the same, it will promt the user to redo the process
 
+    //If the line is the same, it will promt the user to redo the process
     if (found) {
         cout << "An account with this account name already exists!" << endl;
         found = false;
@@ -39,19 +38,15 @@ filecreate:
         //If the process doesn't find any similarities, the file will be creates    
         ofstream fileCreate(tempFileName, ios::app);
         fileCreate << filename << "\t" << usernameCreate << "\t" << passwordCreate << "\t" << linkCreate << "\t" << notesCreate << "\t";
-        //Close file   
         fileCreate.close();
-
 
         fstream fin, fout;
         // Open input file
-        // ios::binary- reading file
-        // character by character
+        //Creating a duplicate file in a different name
         fin.open(tempFileName, fstream::in);
         fout.open("temp.txt", fstream::out);
 
-        // Reading original file till
-        // end of file
+        //Encrypt the inside of the duplicate file
         while (fin >> noskipws >> c) {
             int temp = (c + key);
 
@@ -59,16 +54,14 @@ filecreate:
             // output file
             fout << (char)temp;
         }
-
         // Closing both files
         fin.close();
         fout.close();
 
+        //Removing original "unencrypted file"
         remove(tempFileName.c_str());
+        //Renaming new file to original
         rename("temp.txt", tempFileName.c_str());
-      
-
     }
-
     cout << "Account added to the Database." << endl;
 }

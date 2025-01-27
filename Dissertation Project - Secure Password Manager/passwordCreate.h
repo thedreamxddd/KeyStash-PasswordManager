@@ -9,10 +9,8 @@ using namespace std;
 class passwordCreate {
 private:
 	int length;
-
 public:
 	void getPasswordCreate();
-
 };
 
 
