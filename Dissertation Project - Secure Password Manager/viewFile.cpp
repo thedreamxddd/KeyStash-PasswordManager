@@ -5,6 +5,7 @@
 void viewFile::getViewFile() {
 viewfiles:
     //Identifying the directory path to find files
+    cin.ignore();
     cout << "Enter the directory path of the stored files: " << endl;
     getline(cin, directoryPath);
 
@@ -27,6 +28,7 @@ viewfiles:
 //Viewing Inside of The File Function
 void viewFile::getViewInsideFile() {
     //Identifying which file to view
+    cin.ignore();
     cout << "Which account would you like to view?: " << endl;
     getline(cin, response);
     accountFile = response + ".txt";

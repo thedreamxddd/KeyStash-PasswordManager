@@ -5,6 +5,7 @@
 void deleteFile::getFileDelete() {
 deletefile:
 	//Identifiying the name of file
+	cin.ignore();
 	cout << "Enter the file you would like to remove: " << endl;
 	getline(cin, tempfile);
 	//Adding .txt in order to find file name

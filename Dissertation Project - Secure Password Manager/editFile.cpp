@@ -5,6 +5,7 @@
 void editFile::getEditFile() {
 editingFile:
     //Identifying the name of the file
+    cin.ignore();
     cout << "Enter the file name you would like to edit: " << endl;
     getline(cin, fileNameEdit);
     //Adding .txt in order to find file name
@@ -28,7 +29,7 @@ editingFile:
     //If the file exists, enter the account details
     if (FileExists(tempFile)){
         //Gathering all of the information to store
-        cout << "Enter the details bellow correctly: " << endl;
+        cout << "Enter the details bellow correctly. " << endl;
         cout << "Login (Username/Email Address): " << endl;
         getline(cin, usernameEdit);
         cout << "Password: " << endl;

@@ -9,8 +9,14 @@
 #include "sodium.h"
 using namespace std;
 
+//TODO:
+//Check if a file exists while EDITING
+//Fix Path Discovery ?
+
+
 int main()
 {
+//Variables
 	Login l1;
 	passwordCheck pc1;
 	createFile cf1;
@@ -18,8 +24,56 @@ int main()
 	viewFile vf1;
 	editFile ef1;
 	passwordCreate pcr1;
+	string response;
 
-	vf1.getViewFile();
+//Login
+	l1.getLogin();
 
+//Account Acctions
+Start:
+	cout << "What would you like to do next?:" << endl;
+	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Exit" << endl;
+	cin >> response;
+
+	if (response == "1") {
+		cf1.getFileCreate();
+		goto Start;
+	}
+	else if (response == "2") {
+		ef1.getEditFile();
+		goto Start;
+	}
+	else if (response == "3") {
+	Viewing:
+		cout << "1. List Account(s)" << "\n" << "2. View Existing Account(s)" << "\n" << "3. Go Back" << endl;
+		cin >> response;
+		if (response == "1") {
+			vf1.getViewFile();
+			goto Viewing;
+		}
+		else if (response == "2") {
+			vf1.getViewInsideFile();
+			goto Viewing;
+		}
+		else if (response == "3") {
+			goto Start;
+		}
+		else {
+			cout << "This Option Does Not Exist!" << endl;
+			goto Viewing;
+		}
+	}
+	else if (response == "4") {
+		df1.getFileDelete();
+		goto Start;
+	}
+	else if (response == "5") {
+		cout << "Shutting Down KeeStash...." << endl;
+		exit(0);
+	}
+	else {
+		cout << "This Option Does Not Exist!" << endl;
+		goto Start;
+	}
 	return 0;
 }

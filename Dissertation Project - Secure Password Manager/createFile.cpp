@@ -4,7 +4,8 @@
 void createFile::getFileCreate() {
 filecreate:
     //Gathering all of the information to store
-    cout << "Enter the details bellow correctly: " << endl;
+    cout << "Enter the details bellow correctly. " << endl;
+    cin.ignore();
     cout << "Account Name: " << endl;
     getline(cin, filename);
     cout << "Login (Username/Email Address): " << endl;
