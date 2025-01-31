@@ -18,7 +18,7 @@ tryAgain:
 	else {
 		if (passwordTry == 3) {
 			cout << "Too many login attempts. Shutting down.";
-			exit;
+			exit(1);
 		}
 		else {
 			passwordTry++;
