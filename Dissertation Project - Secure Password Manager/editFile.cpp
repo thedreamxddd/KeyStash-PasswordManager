@@ -27,7 +27,7 @@ editingFile:
     fout.close();
 
     //If the file exists, enter the account details
-    if (FileExists(tempFile)){
+    if (FileExists(tempFileName)){
         //Gathering all of the information to store
         cout << "Enter the details bellow correctly. " << endl;
         cout << "Login (Username/Email Address): " << endl;

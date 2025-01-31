@@ -10,8 +10,7 @@
 using namespace std;
 
 //TODO:
-//Check if a file exists while EDITING
-//Fix Path Discovery ?
+//Add Password Strength Check to Edit&Create files
 
 
 int main()
@@ -32,7 +31,7 @@ int main()
 //Account Acctions
 Start:
 	cout << "What would you like to do next?:" << endl;
-	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Exit" << endl;
+	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Generate Password \n6. Exit" << endl;
 	cin >> response;
 
 	if (response == "1") {
@@ -68,6 +67,10 @@ Start:
 		goto Start;
 	}
 	else if (response == "5") {
+		pcr1.getPasswordCreate();
+		goto Start;
+	}
+	else if (response == "6") {
 		cout << "Shutting Down KeeStash...." << endl;
 		exit(0);
 	}
