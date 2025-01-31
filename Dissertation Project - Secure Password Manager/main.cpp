@@ -11,6 +11,7 @@ using namespace std;
 
 //TODO:
 //Add Password Strength Check to Edit&Create files
+//Re write the login option - create a file with the password stored there, if the file is there create a file etc.
 
 
 int main()
