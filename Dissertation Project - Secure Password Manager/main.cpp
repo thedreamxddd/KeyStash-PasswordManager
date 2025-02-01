@@ -31,8 +31,8 @@ int main()
 
 //Account Acctions
 Start:
-	cout << "What would you like to do next?:" << endl;
-	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Password Options \n6. Exit" << endl;
+	cout << "\nWhat would you like to do next?:" << endl;
+	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Password Options \n6. Exit\n" << endl;
 	cin >> response;
 
 	if (response == "1") {
@@ -45,7 +45,7 @@ Start:
 	}
 	else if (response == "3") {
 	Viewing:
-		cout << "1. List Account(s)" << "\n" << "2. View Existing Account(s)" << "\n" << "3. Go Back" << endl;
+		cout << "\n1. List Account(s)" << "\n" << "2. View Existing Account(s)" << "\n" << "3. Go Back\n" << endl;
 		cin >> response;
 		if (response == "1") {
 			vf1.getViewFile();
@@ -59,7 +59,7 @@ Start:
 			goto Start;
 		}
 		else {
-			cout << "This Option Does Not Exist!" << endl;
+			cout << "\nThis Option Does Not Exist!" << endl;
 			goto Viewing;
 		}
 	}
@@ -69,7 +69,7 @@ Start:
 	}
 	else if (response == "5") {
 	Passwords:
-		cout << "1. Generate Password" << "\n" << "2. Check Password Strength" << "\n" << "3. Go Back" << endl;
+		cout << "\n1. Generate Password" << "\n" << "2. Check Password Strength" << "\n" << "3. Go Back\n" << endl;
 		cin >> response;
 		if (response == "1") {
 			pcr1.getPasswordCreate();
@@ -83,16 +83,16 @@ Start:
 			goto Start;
 		}
 		else {
-			cout << "This Option Does Not Exist!" << endl;
+			cout << "\nThis Option Does Not Exist!" << endl;
 			goto Passwords;
 		}
 	}
 	else if (response == "6") {
-		cout << "Shutting Down KeeStash...." << endl;
+		cout << "\nShutting Down KeeStash...." << endl;
 		exit(0);
 	}
 	else {
-		cout << "This Option Does Not Exist!" << endl;
+		cout << "\nThis Option Does Not Exist!" << endl;
 		goto Start;
 	}
 	return 0;
