@@ -32,7 +32,7 @@ int main()
 //Account Acctions
 Start:
 	cout << "What would you like to do next?:" << endl;
-	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Generate Password \n6. Exit" << endl;
+	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Password Options \n6. Exit" << endl;
 	cin >> response;
 
 	if (response == "1") {
@@ -68,8 +68,24 @@ Start:
 		goto Start;
 	}
 	else if (response == "5") {
-		pcr1.getPasswordCreate();
-		goto Start;
+	Passwords:
+		cout << "1. Generate Password" << "\n" << "2. Check Password Strength" << "\n" << "3. Go Back" << endl;
+		cin >> response;
+		if (response == "1") {
+			pcr1.getPasswordCreate();
+			goto Passwords;
+		}
+		else if (response == "2") {
+			pc1.getStrengthCheck();
+			goto Passwords;
+		}
+		else if (response == "3") {
+			goto Start;
+		}
+		else {
+			cout << "This Option Does Not Exist!" << endl;
+			goto Passwords;
+		}
 	}
 	else if (response == "6") {
 		cout << "Shutting Down KeeStash...." << endl;

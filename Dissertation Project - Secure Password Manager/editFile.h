@@ -11,7 +11,7 @@ private:
 	string fileNameEdit, tempFileName;
 
 	string tempFile = "temp.txt";
-	int key = 493459394153;
+	int key = 8284200971542816123;
 	char c;
 public:
 	void getEditFile();
