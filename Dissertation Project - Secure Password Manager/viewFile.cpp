@@ -29,6 +29,7 @@ viewfiles:
 void viewFile::getViewInsideFile() {
     //Identifying which file to view
     cin.ignore();
+    viewingFile:
     cout << "Which account would you like to view?: " << endl;
     getline(cin, response);
     accountFile = response + ".txt";
@@ -60,10 +61,27 @@ void viewFile::getViewInsideFile() {
     }
     //If file does not match, file does not exist.
     if (located == false) {
-        cout << "No Match found!" << endl;
+        cout << "File does not exist." << endl;
+        cout << "\n 1. Re-attempt \n 2. Go Back \n" << endl;
+    response1:
+        cin >> response;
+        cin.ignore();
+        if (response == "1") {
+            goto viewingFile;
+        }
+        else if (response == "2") {
+            cout << "\nGoing back...." << endl;
+        }
+        else {
+            cout << "\n This option doesn't exist!" << endl;
+            goto response1;
+        }
     }
-    //Closing file & Removing the temporary decrypted file
-    passwordFile.close();
-    remove(tempFile.c_str());
+    else {
+        //Closing file & Removing the temporary decrypted file
+        passwordFile.close();
+        remove(tempFile.c_str());
+    }
+    
 
 }

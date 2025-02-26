@@ -9,6 +9,7 @@ class editFile {
 private:
 	string usernameEdit, passwordEdit, linkEdit, notesEdit;
 	string fileNameEdit, tempFileName;
+	string response;
 
 	string tempFile = "temp.txt";
 	int key = 8284200971542816123;

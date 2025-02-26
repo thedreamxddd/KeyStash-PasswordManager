@@ -71,9 +71,19 @@ editingFile:
     }
     else {
         cout << "File does not exist." << endl;
-        goto editingFile;
+        cout << "\n 1. Re-attempt \n 2. Go Back \n" << endl;
+    response1:
+        cin >> response;
+        if (response == "1") {
+            goto editingFile;
+        }
+        else if (response == "2") {
+            cout << "\nGoing back...." << endl;
+        }
+        else {
+            cout << "\n This option doesn't exist!" << endl;
+            goto response1;
+        }
     }
-
-
 
 }

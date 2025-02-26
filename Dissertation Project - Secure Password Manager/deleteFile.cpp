@@ -22,7 +22,19 @@ deletefile:
 	}
 	else {
 		cout << "File does not exist." << endl;
-		goto deletefile;
+		cout << "\n 1. Re-attempt \n 2. Go Back \n" << endl;
+	response1:
+		cin >> response;
+		if (response == "1") {
+			goto deletefile;
+		}
+		else if (response == "2") {
+			cout << "\nGoing back...." << endl;
+		}
+		else {
+			cout << "\n This option doesn't exist!" << endl;
+			goto response1;
+		}
 	}
 }
 
