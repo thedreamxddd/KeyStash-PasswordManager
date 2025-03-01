@@ -5,8 +5,12 @@ insert project discription here
 
 ## 1. How to use "KeyStash"
 ### 1.1. Method 1
-Insert how to use the exe
-
+In order to use the "KeyStash" Password Manger as intended follow these steps:
+  - Locate "KeyStash.zip" in the GitHub Repository.
+  - Unzip the "KeyStash.zip" file in your desired directory.
+  - Make sure that the folder contains "libsodium.dll" and "Dissertation Project - Secure Password Manager.exe".
+  - Run the .exe file
+  - The "Master password" for the Password Manger is "password".
 
 ### 1.2. Method 2
 ![Image](https://github.com/user-attachments/assets/2e2817e2-cb31-4ad4-8286-1af9b7d08273)
