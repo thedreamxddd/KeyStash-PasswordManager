@@ -18,7 +18,6 @@ In order to edit the code and make desired changes to the Password Manager follo
   - Ensure that you have ".sln" file and "libsodium_package" folder as the program will not function without the Sodium Library.
   - Download Visual Studio 2022 or Visual Studio Code
   - Once you have the IDE open, follow the images bellow in order to add the library to your IDE.
-
   - Open up the project properties.
 ![Image](https://github.com/user-attachments/assets/2e2817e2-cb31-4ad4-8286-1af9b7d08273)
   - Navigate to the "C++ General" tab and assign the path to the "libsodium_package" that is stored within the files.
