@@ -29,3 +29,6 @@ In order to edit the code and make desired changes to the Password Manager follo
     
 ![Image](https://github.com/user-attachments/assets/9dc3d6ec-6738-47f1-adb4-670adddfb194)
 ![Image](https://github.com/user-attachments/assets/f0756c85-b531-4efe-8feb-63241baaad1b)
+
+## Additional Information
+This Password Manager will continue to be developed and improved, this is the first iteration of the v1.0. If you intend to use this, ensure to check back to see if any updates have been released!
