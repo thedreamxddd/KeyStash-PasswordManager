@@ -31,9 +31,11 @@ int main()
 
 //Account Acctions
 Start:
+	cin.ignore();
 	cout << "\nWhat would you like to do next?:" << endl;
 	cout << "\n1. Add New Account \n2. Edit Existing Account(s) \n3. View Existing Account(s) \n4. Delete Account(s) \n5. Password Options \n6. Exit\n" << endl;
-	cin >> response;
+	getline(cin, response);
+	
 
 	if (response == "1") {
 		cf1.getFileCreate();
@@ -46,7 +48,8 @@ Start:
 	else if (response == "3") {
 	Viewing:
 		cout << "\n1. List Account(s)" << "\n" << "2. View Existing Account(s)" << "\n" << "3. Go Back\n" << endl;
-		cin >> response;
+		getline(cin, response);
+		
 		if (response == "1") {
 			vf1.getViewFile();
 			goto Viewing;
@@ -70,7 +73,7 @@ Start:
 	else if (response == "5") {
 	Passwords:
 		cout << "\n1. Generate Password" << "\n" << "2. Check Password Strength" << "\n" << "3. Go Back\n" << endl;
-		cin >> response;
+		getline(cin, response);
 		if (response == "1") {
 			pcr1.getPasswordCreate();
 			goto Passwords;

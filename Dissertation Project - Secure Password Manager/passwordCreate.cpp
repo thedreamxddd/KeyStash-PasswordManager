@@ -39,5 +39,6 @@ passwordcreate:
 			curChar = keySet[cur];
 			cout << curChar;
 		}
+		cin.ignore();
 		cout << "\n";
 }

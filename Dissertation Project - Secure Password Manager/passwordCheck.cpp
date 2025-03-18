@@ -5,7 +5,6 @@
 void passwordCheck::getStrengthCheck() {
     //Storing password to check for strength
     cout << "Enter Password:" << endl;
-    cin.ignore();
     getline(cin, password);
     //Creating a veriable to split the password into letters one by one
     int length = password.size(), i;

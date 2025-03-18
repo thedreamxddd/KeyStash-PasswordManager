@@ -4,6 +4,7 @@
 //Edit File Function
 void editFile::getEditFile() {
 editingFile:
+    
     //Identifying the name of the file
     cin.ignore();
     cout << "Enter the file name you would like to edit: " << endl;
@@ -82,6 +83,7 @@ editingFile:
         }
         else {
             cout << "\n This option doesn't exist!" << endl;
+            cin.ignore();
             goto response1;
         }
     }

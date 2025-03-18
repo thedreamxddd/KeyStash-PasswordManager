@@ -4,8 +4,8 @@
 //Delete File Function
 void deleteFile::getFileDelete() {
 deletefile:
-	//Identifiying the name of file
 	cin.ignore();
+	//Identifiying the name of file
 	cout << "Enter the file you would like to remove: " << endl;
 	getline(cin, tempfile);
 	//Adding .txt in order to find file name
@@ -33,6 +33,7 @@ deletefile:
 		}
 		else {
 			cout << "\n This option doesn't exist!" << endl;
+			cin.ignore();
 			goto response1;
 		}
 	}

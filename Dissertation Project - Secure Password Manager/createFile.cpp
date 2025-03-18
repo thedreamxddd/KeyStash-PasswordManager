@@ -6,7 +6,6 @@ void createFile::getFileCreate() {
     //Gathering all of the information to store
 filecreate:
     cout << "Enter the details bellow correctly. " << endl;
-    cin.ignore();
     cout << "Account Name: " << endl;
     getline(cin, filename);
     tempFilename = filename + ".txt";
